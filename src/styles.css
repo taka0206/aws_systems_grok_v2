@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Meiryo UI", "Yu Gothic UI", "Hiragino Sans", "IPAGothic", "Noto Sans JP", sans-serif;
+  --color-paper: #f4f3ef;
+  --color-ink: #1a1a1a;
+  --color-muted: #5e5e5a;
+  --color-line: #d4d3cd;
+  --color-major: #b7b6b0;
+  --color-panel: #fbfbfa;
+  --color-wash: #e8e7e2;
+  --color-ink-soft: #2c2c2c;
+  --radius-card: 0.4rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    text-rendering: optimizeLegibility;
+  }
+}
